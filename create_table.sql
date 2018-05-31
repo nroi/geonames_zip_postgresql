@@ -3,7 +3,7 @@ drop schema if exists geonames cascade;
 create schema geonames;
 
 create table geonames.zipcodes (
-    country_code text check (char_length(country_code) = 2) not null,
+    country_code char(2) not null,
     postal_code text check (char_length(postal_code) <= 20) not null,
     place_name text check (char_length(place_name) <= 180),
     admin_name1 text check (char_length(admin_name1) <= 100),
