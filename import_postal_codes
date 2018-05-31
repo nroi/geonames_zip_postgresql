@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Usage: HOST='database.myhost.com' DBNAME='mydatabase' USERNAME='myuser' ./import_schema
+# Usage: HOST='database.myhost.com' DBNAME='mydatabase' USERNAME='myuser' ./import_postal_codes
 
 GEONAMES_URL='http://download.geonames.org/export/zip/allCountries.zip'
 
