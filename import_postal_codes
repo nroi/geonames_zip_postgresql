@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Usage: HOST='database.myhost.com' DBNAME='mydatabase' USERNAME='myuser' ./import_postal_codes
+# Usage: PG_HOST='database.myhost.com' PG_DATABASE='mydatabase' PG_USER='myuser' ./import_postal_codes
 
 GEONAMES_URL='http://download.geonames.org/export/zip/allCountries.zip'
 
@@ -8,6 +8,6 @@ if [ ! -f 'allCountries.zip' ]; then
     wget "$GEONAMES_URL" || exit 1
 fi
 
-psql --host="$HOST" --dbname="$DBNAME" --username="$USERNAME" --file='create_table.sql' || exit 1
+psql --host="$PG_HOST" --dbname="$PG_DATABASE" --username="$PG_USER" --file='create_table.sql' || exit 1
 echo 'Copy data from text file to database.'
-psql --host="$HOST" --dbname="$DBNAME" --username="$USERNAME" --file='copy_table.sql' || exit 1
+psql --host="$PG_HOST" --dbname="$PG_DATABASE" --username="$PG_USER" --file='copy_table.sql' || exit 1
