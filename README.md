@@ -1,6 +1,6 @@
 # geonames\_zip\_postgresql
 
-Copies the zip codes / postal codes from geonames into a PostgreSQL database. Apart from a PostgreSQL database, only `unzip`, `wget` and `sed` are required.
+Copies the zip codes / postal codes from geonames.org into a PostgreSQL database. Apart from a PostgreSQL database, only `unzip`, `wget` and `sed` are required.
 
 
 ## Usage:
