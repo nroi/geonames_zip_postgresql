@@ -1,5 +1,6 @@
-# geonames_zip_postgresql
-Copies the zip codes / postal codes from geonames into a PostgreSQL database.
+# geonames\_zip\_postgresql
+
+Copies the zip codes / postal codes from geonames into a PostgreSQL database. Apart from a PostgreSQL database, only `unzip`, `wget` and `sed` are required.
 
 Includes a bash script and an SQL script to import the zip codes from http://download.geonames.org/export/zip/ into a PostgreSQL database. Two things to watch out for:
 1. If you happen to already have a schema called 'geonames' in your database, this script will drop it.
