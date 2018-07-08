@@ -12,8 +12,8 @@ create table geonames.zipcodes (
     admin_code2 text check (char_length(admin_code2) <= 20),
     admin_name3 text check (char_length(admin_name3) <= 100),
     admin_code3 text check (char_length(admin_code3) <= 20),
-    longitude numeric(7,4) not null,
     latitude numeric(7,4) not null,
+    longitude numeric(7,4) not null,
     accuracy integer
 );
 
